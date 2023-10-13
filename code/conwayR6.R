@@ -27,7 +27,6 @@ GoF <- R6Class(
         seq(max(y - 1, 1), min(y + 1, self$width - 1), by = 1)
       cord.comb <- as.matrix(expand.grid(row.cord, col.cord))
       colnames(cord.comb) <- c("x", "y")
-      
       sum.alive <- 0
       for (i in 1:nrow(cord.comb)) {
         if (cord.comb[i, 1] != x | cord.comb[i, 2] != y) {
@@ -76,10 +75,11 @@ game$bringLife(11, 10)
 game$bringLife(11, 9)
 game$bringLife(11, 11)
 
-i <- 1
+# create list to store .gif frames
 img.list <- list()
 
 # advance the game for 20 simulation steps
+i <- 1
 while (i <= 20) {
   lifemat <- game$grid
   melt.lifemat <- melt(lifemat)
