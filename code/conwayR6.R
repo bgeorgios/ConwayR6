@@ -2,7 +2,7 @@ packages <- c("R6", "ggplot2", "reshape2", "animation", "magick")
 load <- lapply(packages, library, character.only = TRUE)
 
 # create R6 class to store the game
-GoF <- R6Class(
+GoL <- R6Class(
   "Conway's Game of Life",
   public = list(
     width = NULL,
@@ -68,7 +68,7 @@ GoF <- R6Class(
 )
 
 # initialize a 20 x 20 grid
-game <- GoF$new(20, 20)
+game <- GoL$new(20, 20)
 game$makeGrid()
 game$bringLife(10, 10)
 game$bringLife(11, 10)
