@@ -112,4 +112,4 @@ while (i <= 20) {
 # create .gif
 img.joined <- image_join(img.list)
 gif <- image_animate(img.joined, fps = 2)
-image_write(image = gif, path = "conway_gif.gif")
+image_write(image = gif, path = "conwayR6.gif")
